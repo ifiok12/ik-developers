@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IK Developers</title>
+    <!-- Load Bootstrap first -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="WhatsApp Image 2025-08-14 at 13.03.05_2e2dfe97.jpg">
+    <!-- Then your custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <!-- Placeholder for logo.png -->
+                <img src="vector.png" alt="We Developers Logo" width="50" height="50" class="d-inline-block align-top rounded">
+                <span style="font-family: Brush Script MT, cursive;">IK Developers</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Hire</a></li>
+                </ul>
+                <a href="#" class="btn btn-purple px-4 py-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title mb-4">
+                        Great <span class="purple">Product</span> is built by great <span class="blue-bold">teams</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        We help build and manage a team of world-class developers to bring your vision to life
+                    </p>
+                    <a href="#" class="hero-btn btn">Let's get started!</a>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <!-- Placeholder for Hero-Wrapper__image.jpg -->
+                    <img src="Hero-Wrapper__image.jpg" alt="Team of developers collaborating" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Services Section -->
+        <section class="services-section">
+            <h2 class="services-title">Services we offer</h2>
+            
+            <div class="services-container">
+                <button class="scroll-btn left" onclick="scrollServices(-1)"><i class="fas fa-chevron-left"></i></button>
+                <div class="services-scroller" id="servicesScroller">
+                    <div class="service-card">
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="icon-circle">
+                            <i class="fas fa-tablet" style="color:blue;"></i>
+                        </div>
+                        <h3>Mobile App Development</h3>
+                        <p>A website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="icon-circle">
+                            <i class="fas fa-code" style="color:blue;"></i>
+                        </div>
+                        <h3>Web Design & Development</h3>
+                        <p>A website is an extension of yourself and we can help you to express it properly. your website is your number one marketing asset because we live in a digital age.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="icon-circle">
+                            <i class="fas fa-th" style="color:blue;"></i>
+                        </div>
+                        <h3>Software Testing Service</h3>
+                        <p>A website is an extension of yourself and we can help you to express it properly. your website is your number one marketing asset because we live in a digital world.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="icon-circle">
+                            <i class="fas fa-object-group" style="color:blue;"></i>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>A website is an extension of yourself and we can help you express it properly. Create beautiful, intuitive interfaces that enhance user experience and drive engagement.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="icon-circle">
+                            <i class="fas fa-shopping-cart" style="color:blue;"></i>
+                        </div>
+                        <h3>E-commerce Solutions</h3>
+                        <p>A website is an extension of yourself and we can help you express it properly. Build robust online stores with secure payment gateways and inventory management systems.</p>
+                    </div>
+                </div>
+                <button class="scroll-btn right" onclick="scrollServices(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="dots-container" id="dotsContainer">
+                <!-- Dots will be added dynamically by JavaScript -->
+            </div>
+            
+            <div class="numbers-container" id="numbersContainer">
+                <span class="number current-number" id="currentNumber">01</span>
+                <span class="number-separator">—</span>
+                <span class="number total-number" id="totalNumber">05</span>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <!-- Gradient circles -->
+        <div class="gradient-circle circle-top-left"></div>
+        <div class="gradient-circle circle-bottom-right"></div>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text content -->
+                <div class="col-lg-6">
+                    <div class="text-content">
+                        <span class="small-line"></span>
+                        <h2>Leading companies trust us<br>
+                            <strong>to develop software</strong>
+                        </h2>
+                        <p>
+                            We  <span class="textt" style="color:#F76680; font-weight:600;"> add development capacity</span> to tech teams. 
+                            Our value isn't limited to building teams but is equally distributed across the project lifecycle. 
+                            We are a custom software development company that guarantees the successful delivery of your project.
+                        </p>
+                        <a href="#" class="trust-link">See more Informations <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Image/Video -->
+                <div class="col-lg-6">
+                    <div class="image-box">
+                        <!-- Replace with your real picture -->
+                        <img src="Abou-us-Video.jpg" alt="Team working">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <div class="container">
+                <span class="small-line"></span>
+                <h3>Meet the People<br><strong>We are Working With</strong></h3>
+            </div>
+            <div class="img-fluid">
+            <img src="Frame 22.png" alt="People working together">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Client Logo Section -->
+    <section class="logo-section">
+        <div class="container">
+            
+            
+            <div class="logo-scroller-container">
+                <div class="logo-scroller" id="logoScroller">
+                    <div class="logo-item">
+                        <img src="Logo-9.svg" alt="Ose Logo" class="img-fluid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="logo8.svg" alt="Ap Logo" class="img-fluid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="logo5.svg" alt="S82 Logo" class="img-fluid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="logo-7.svg" alt="NAdClipse Logo" class="img-fluid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="logo9.svg" alt="BRIDGE Logo" class="img-fluid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="logo-6.svg" alt="TechmMate Logo" class="img-fluid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="trinity-logo-design-template-260nw-1222123573.webp" alt="Client 7 Logo" class="img-fluid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images (1).jpeg" alt="Client 8 Logo" class="img-fluid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images.jpeg" alt="Client 9 Logo" class="img-fluid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="abstract-tech-logo-triangle-shape-vector-21636610.jpg" alt="Client 10 Logo" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+   <!-- Testimonials Section -->
+    <section class="testimonial-section">
+        <div class="container text-center">
+            <!-- Section Heading -->
+            <div class="section-heading">
+                <div class="section-line"></div>
+                <h5>Why customers love</h5>
+                <h2><strong>working with us</strong></h2>
+                
+            </div>
+
+            <!-- Quote Text -->
+            <div class="testimonial-text position-relative" id="testimonialQuote">
+                <i class="fas fa-quote-left quote-left"></i>
+                Without any doubt I recommend Alcaline Solutions as one of the best web design and digital marketing agencies. One of the best agencies I've came across so far. Wouldn't be hesitated to introduce their work to someone else.
+                <i class="fas fa-quote-right quote-right"></i>
+            </div>
+
+            <!-- Carousel Arrows - Now positioned on sides of screen -->
+            <div class="carousel-nav">
+                <div class="carousel-arrow" id="prevTestimonial"><i class="fas fa-arrow-left"></i></div>
+                <div class="carousel-arrow" id="nextTestimonial"><i class="fas fa-arrow-right"></i></div>
+            </div>
+
+            <!-- People Carousel -->
+            <div class="testimonial-carousel" id="testimonialPeople">
+                <!-- Person 1 -->
+                <div class="testimonial-person" data-quote="Without any doubt I recommend Alcaline Solutions as one of the best web design and digital marketing agencies. One of the best agencies I've came across so far. Wouldn't be hesitated to introduce their work to someone else.">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Person 1">
+                    <div class="stars">★★★★★</div>
+                    <div class="name">Romeena De Silva</div>
+                    <div class="position">Jonet Cosmetics</div>
+                </div>
+
+                <!-- Person 2 -->
+                <div class="testimonial-person" data-quote="Alcaline Solutions delivered an outstanding website that perfectly captures our brand. Their team was professional, responsive, and a pleasure to work with. Highly recommend!">
+                    <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Person 2">
+                    <div class="stars">★★★★★</div>
+                    <div class="name">Romeena De Silva</div>
+                    <div class="position">Tech Innovations</div>
+                </div>
+
+                <!-- Person 3 (Active) -->
+                <div class="testimonial-person active" data-quote="Simform is quick to identify larger problem with the Software so we decided to expand our scope to build new modules. Their expertise is truly world-class.">
+                    <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Person 3">
+                    <div class="stars">★★★★★</div>
+                    <div class="name">Imran Khan</div>
+                    <div class="position">Software Engineer</div>
+                </div>
+
+                <!-- Person 4 -->
+                <div class="testimonial-person" data-quote="The development process was smooth and efficient. Alcaline Solutions understood our needs and delivered a product that exceeded our expectations. Fantastic job!">
+                    <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Person 4">
+                    <div class="stars">★★★★★</div>
+                    <div class="name">Romeena De Silva</div>
+                    <div class="position">Global Enterprises</div>
+                </div>
+
+                <!-- Person 5 -->
+                <div class="testimonial-person" data-quote="Exceptional service and results! Alcaline Solutions helped us transform our digital presence, leading to significant growth in our online engagement. A true partner.">
+                    <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Person 5">
+                    <div class="stars">★★★★★</div>
+                    <div class="name">Romeena De Silva</div>
+                    <div class="position">Creative Agency</div>
+                </div>
+            </div>
+
+<!-- Decorative Arrows -->
+<img src="Deco-img-arrow2.png" alt="arrow left curve" class="arrow-deco arrow-left">
+<img src="Deco-img-arrow.png" alt="arrow right curve" class="arrow-deco arrow-right">
+
+
+        </div>
+    </section>
+
+
+
+
+    <!-- Case Studies Section -->
+    <section class="case-studies-section">
+        <div class="container">
+            <div class="section-heading">
+                <div class="section-line"></div>
+                <h5>Our recent</h5>
+                <h2><strong>Case studies</strong></h2>
+                
+            </div>
+
+            <!-- First Card -->
+            <div class="row bg-blue case-card align-items-center mb-5">
+                <div class="col-md-6 order-md-1 case-image">
+                    <img src="Case-study__image.png" alt="FireFit App Screens">
+                </div>
+                <div class="col-md-6 order-md-2 case-text">
+                    <h5>Website Design for SCFC Canada</h5>
+                    <p>
+                        Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.
+                    </p>
+                    <a href="#" class="read-more">Read more ></a>
+                </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="row bg-green case-card align-items-center mb-5">
+                <div class="col-md-6 order-md-1 case-image">
+                    <img src="Case-study__image.svg" alt="MyGoals App Screens">
+                </div>
+                <div class="col-md-6 order-md-1 case-text">
+                    <h5>Mobile App Development for MyGoals</h5>
+                    <p>
+                         Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.
+                    </p>
+                    <a href="#" class="read-more">Read more ></a>
+                </div>
+            </div>
+
+            <!-- Third Card -->
+            <div class="row bg-pink case-card align-items-center">
+                <div class="col-md-6 order-md-1 case-image">
+                    <img src="Case-study__image.jpg" alt="Meditation App Screens">
+                </div>
+                <div class="col-md-6 order-md-2 case-text">
+                    <h5>UI/UX Redesign for Mindful App</h5>
+                    <p>
+                        Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.
+                    </p>
+                    <a href="#" class="read-more">Read more ></a>
+                </div>
+            </div>
+
+            <!-- Read More Case Studies -->
+            <div class="read-more-section">
+                <a href="#">Read more case studies  ></a>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- Build Team Sections -->
+    <section class="build-team-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Transition Title -->
+            <div class="transition-title">
+                <span></span>
+                <h3>Way of building <br><strong>Great Software</strong></h3>
+            </div>
+                <div class="col-md-6">
+                    <h3>Build the right team to scale</h3>
+                    <p>Finding the right talent is not easy. We help you find the talent<br> that suits your needs, follows your processes, and sticks with<br> you long term (not the case with freelancers)</p>
+                    <p>Our <a href="#" class="text-decoration-none text-primary"><span class="delivery">  delivery model</span></a> helps you cut costs and deliver within budget.</p>
+                    <p class="quote">"Simform is quick to identify larger problem with the <br>Software so we decided to expand our scope to build<br> new modules"</p>
+                    <div class="author">
+                        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="CEO"/>
+                        <div>
+                            <span>Jeewa Markram</span><br/>
+                            <small>CEO</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <img src="Rectangle 17.png" alt="Team discussion" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="build-team-section">
+        <div class="container">
+            <div class="row align-items-center flex-md-row-reverse">
+                <div class="col-md-6">
+                   <h3>Build the right team to scale</h3>
+                    <p>Finding the right talent is not easy. We help you find the talent<br> that suits your needs, follows your processes, and sticks with<br> you long term (not the case with freelancers)</p>
+                    <p>Our <a href="#" class="text-decoration-none text-primary"><span class="delivery">delivery model</span></a> helps you cut costs and deliver within<br> budget.</p>
+                    <p class="quote">"Simform is quick to identify larger problem with the<br> Software so we decided to expand our scope to build<br> new modules"</p>
+                    <div class="author">
+                        <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="CEO"/>
+                        <div>
+                            <span>Jeewa Markram</span><br/>
+                            <small>CEO</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <img src="Rectangle 18.svg" alt="Team working" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="build-team-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                      <h3>Build the right team to scale</h3>
+                    <p>Finding the right talent is not easy. We help you find the talent <br>that suits your needs, follows your processes, and sticks with <br>you long term (not the case with freelancers)</p>
+                    <p>Our <a href="#" class="text-decoration-none text-primary"><span class="delivery">delivery model</span></a> helps you cut costs and deliver within<br> budget.</p>
+                    <p class="quote">"Simform is quick to identify larger problem with the <br>Software so we decided to expand our scope to build<br> new modules"</p>
+                    <div class="author">
+                        <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="CEO"/>
+                        <div>
+                            <span>Jeewa Markram</span><br/>
+                            <small>CEO</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Presentation" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Design and Development Approach Section -->
+    <section class="approach-section">
+        <div class="container">
+            <div class="section-heading">
+                 <div class="section-line"></div>
+                <p class="people">Our design and <br><span><strong>development approach</strong></span></p>
+               
+            </div>
+
+           <div class="row g-4">
+                <!-- Changed from col-lg-4 to col-lg-6 for two columns -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="card">
+                        <img src="Rocket_perspective_matte.svg" alt="UX Engineering">
+                        <h5 class="card-title">UX Driven Engineering</h5>
+                        <p class="card-text">
+                            Unlike other companies, we are a <span>UX first</span> development company. Projects are driven by designers and they make sure design and experiences translate to code.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="card">
+                        <img src="Code_perspective_matte.svg" alt="Shared Understanding">
+                        <h5 class="card-title">Developing Shared Understanding</h5>
+                        <p class="card-text">
+                            Unlike other companies, we are a <span class="text-blue">UX first</span> development company. Projects are driven by designers and they make sure design and experiences translate to code.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="card">
+                        <img src="Heart_rate_perspective_matte.svg" alt="Proven Experience">
+                        <h5 class="card-title">Proven Experience and Expertise</h5>
+                        <p class="card-text">
+                            Unlike other companies, we are a <span class="text-red">UX first</span> development company. Projects are driven by designers and they make sure design and experiences translate to code.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="card">
+                        <img src="Shield_perspective_matte.svg" alt="Security IP">
+                        <h5 class="card-title">Security & Intellectual Property (IP)</h5>
+                        <p class="card-text">
+                             Unlike other companies, we are a <span class="text-green">UX first</span> development company. Projects are driven by designers and they make sure design and experiences translate to code.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="card">
+                        <img src="Success_perspective_matte.svg" alt="Code Reviews">
+                        <h5 class="card-title">Code Reviews</h5>
+                        <p class="card-text">
+                              Unlike other companies, we are a <span class="text-yellow">UX first</span> development company. Projects are driven by designers and they make sure design and experiences translate to code.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="card">
+                        <img src="https://img.icons8.com/color/48/000000/approval.png" alt="Quality Assurance">
+                        <h5 class="card-title">Quality Assurance & Testing</h5>
+                        <p class="card-text">
+                             Unlike other companies, we are a <span class="text-red">UX first</span> development company. Projects are driven by designers and they make sure design and experiences translate to code.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack-section">
+        <div class="container">
+            <div class="section-heading">
+                 <div class="section-line"></div>
+                <p class="men">Our <br><span class="fw-bold">Tech Stack</span></p>
+               
+            </div>
+
+            <div class="text-center mb-4">
+                <ul class="nav justify-content-center" style="font-size: 0.95rem;">
+                    <li class="nav-item">
+                        <a class="nav-link text-purple fw-bold active" href="#">Backend</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Frontend</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Databases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">CMS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">CloudTesting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">DevOps</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-4 col-md-2 text-center">
+                    <img src="https://img.icons8.com/color/96/000000/nodejs.png" alt="Node.js">
+                </div>
+                <div class="col-4 col-md-2 text-center">
+                    <img src="https://img.icons8.com/officel/96/000000/php-logo.png" alt="PHP">
+                </div>
+                <div class="col-4 col-md-2 text-center">
+                    <img src="https://img.icons8.com/color/96/000000/mysql-logo.png" alt="MySQL">
+                </div>
+                <div class="col-4 col-md-2 text-center">
+                    <img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png" alt="Java">
+                </div>
+                <div class="col-4 col-md-2 text-center">
+                    <img src="https://img.icons8.com/color/96/000000/net-framework.png" alt=".NET Core">
+                </div>
+                <div class="w-100 d-none d-md-block"></div>
+                <div class="col-4 col-md-2 text-center">
+                    <img src="Group.png" alt="Python">
+                </div>
+                <div class="col-4 col-md-2 text-center">
+                    <img src="https://img.icons8.com/color/96/000000/ruby-programming-language.png" alt="Rails">
+                </div>
+                <div class="col-4 col-md-2 text-center">
+                    <img src="https://img.icons8.com/color/96/000000/golang.png" alt="Go">
+                </div>
+                <div class="col-4 col-md-2 text-center">
+                    <img src="https://img.icons8.com/color/96/000000/mongodb.png" alt="MongoDB">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process Section -->
+    <section class="dev-process-section">
+        <div class="container">
+            <div class="section-heading">
+                <div class="section-line"></div>
+                <p class="me">How development<br><span class="fw-bold">through Alcaline works</span></p>
+                
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Row 1: Top 3 cards -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-black !important"><span class="q">#1</span> Assemble the right team</h6>
+                            <p class="card-text">We handle all aspects of vetting and choosing the right team that you don't have the time, expertise, or desire to do.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-black !important"><span class="q">#3</span> Tech architecture</h6>
+                            <p class="card-text">We break monolithic apps into microservices. Decoupling the code allows teams to move faster and more independently.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-black !important"><span class="q">#5</span> Code reviews</h6>
+                            <p class="card-text">Code reviews before release help detect issues like memory leaks, file leaks, performance signs, and general bad smells.</p>
+                        </div>
+                    </div>
+                </div>
+
+               <!-- Connecting Line -->
+<div class="col-12 d-flex justify-content-center my-4">
+  <div class="connecting-line">
+    <span></span>
+    <img src="https://img.icons8.com/emoji/48/trophy-emoji.png" alt="Trophy">
+  </div>
+</div>
+
+
+                <!-- Row 2: Bottom 3 cards -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-black !important"><span class="q">#2 </span>Sprint planning</h6>
+                            <p class="card-text">Sprint roadmap is a collective planning effort. Team members collaborate to clarify items and ensure shared understanding.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-black !important"><span class="q">#4 </span>Standups & weekly demos</h6>
+                            <p class="card-text">Standups, weekly demos, and weekly reviews make sure everyone is on the same page and can raise their concerns.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-black !important"><span class="q">#6</span> Iterative delivery</h6>
+                            <p class="card-text">We divide the implementation process into several checkpoints rather than a single deadline.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Resources Section -->
+    <section class="resources-section" style="background:white !important;">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-heading">
+                 <div class="section-line"></div>
+                <h5>Featured</h5>
+                <h2>Resources</h2>
+               
+            </div>
+        </div>
+
+       
+        
+        <div class="horizontal-scroll-wrapper" id="resourcesSlider">
+            <div class="resource-row">
+                <!-- Card 1 -->
+                <div class="resource-card-wrapper">
+                    <div class="card resource-card">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Abstract code on a screen">
+                        <div class="card-body">
+                            <h5 class="card-title">How to Build a Scalable Application up to 1 Million Users on AWS</h5>
+                            <a href="#" class="read-more-link">Read More &rarr;<i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="resource-card-wrapper">
+                    <div class="card resource-card">
+                        <img src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1925&auto=format&fit=crop" class="card-img-top" alt="Developer working on a laptop">
+                        <div class="card-body">
+                            <h5 class="card-title">How to Build a Scalable Application up to 1 Million Users on AWS</h5>
+                            <a href="#" class="read-more-link">Read More &rarr;<i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="resource-card-wrapper">
+                    <div class="card resource-card">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Close-up of HTML code">
+                        <div class="card-body">
+                            <h5 class="card-title">How to Build a Scalable Application up to 1 Million Users on AWS</h5>
+                            <a href="#" class="read-more-link">Read More &rarr; <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="resource-card-wrapper">
+                    <div class="card resource-card">
+                        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop" class="card-img-top" alt="Desk with multiple monitors showing code">
+                        <div class="card-body">
+                            <h5 class="card-title">How to Build a Scalable Application up to 1 Million Users on AWS</h5>
+                            <a href="#" class="read-more-link">Read More &rarr; <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="resource-card-wrapper">
+                    <div class="card resource-card">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Laptop showing code with a coffee cup">
+                        <div class="card-body">
+                           <h5 class="card-title">How to Build a Scalable Application up to 1 Million Users on AWS</h5>
+                            <a href="#" class="read-more-link">Read More &rarr; <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="resource-card-wrapper">
+                    <div class="card resource-card">
+                        <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=1812&auto=format&fit=crop" class="card-img-top" alt="Team collaborating around a monitor">
+                        <div class="card-body">
+                          <h5 class="card-title">How to Build a Scalable Application up to 1 Million Users on AWS</h5>
+                            <a href="#" class="read-more-link">Read More &rarr;<i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="resource-card-wrapper">
+                    <div class="card resource-card">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop" 
+                             class="card-img-top" 
+                             alt="Cybersecurity concept with lock icon">
+                        <div class="card-body">
+                           <h5 class="card-title">How to Build a Scalable Application up to 1 Million Users on AWS</h5>
+                            <a href="#" class="read-more-link">Read More &rarr; <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="resource-card-wrapper">
+                    <div class="card resource-card">
+                        <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Man coding in a dark room">
+                        <div class="card-body">
+                           <h5 class="card-title">How to Build a Scalable Application up to 1 Million Users on AWS</h5>
+                            <a href="#" class="read-more-link">Read More &rarr;<i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-hint">
+            <i class="bi bi-arrow-left"></i>
+            <span>Scroll horizontally to see more resources</span>
+            <i class="bi bi-arrow-right"></i>
+        </div>
+    </section>
+
+
+
+    
+    
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Hire the best developers and <br> designers around!</h2>
+                <div class="cta-button-container">
+                    <button class="btn cta-btn">Hire Top Developers</button>
+                    <div class="sparkle top-left"></div>
+                    <div class="sparkle top-right"></div>
+                    <div class="sparkle bottom-left"></div>
+                    <div class="sparkle bottom-right"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer Section -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <!-- About Column -->
+            <div class="col-lg-4 col-md-6 footer-about">
+                <a class="navbar-brand" href="#">
+                    <!-- Placeholder for logo.png -->
+                    <img src="vector.png" alt="We Developers Logo" width="50" height="50" class="d-inline-block align-top rounded">
+                    <span style="font-family: Brush Script MT, cursive;">IK Developers</span>
+                </a>
+                <p class="pen">Lorem Ipsum is simply dummy text of the <br>printing and typesetting industry.</p>
+                <div class="google-partner">
+                    <img src="google-page-speed 1.png" alt="google image" width="150" height="50" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- Links Column -->
+            <div class="col-lg-2 col-md-6 footer-links">
+                <h5>Links</h5>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Areas We Serve</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-md-6 footer-contact">
+                <h5>Contact us</h5>
+                <p class="pen">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <span class="phone-number">+923183561921</span>
+                <div class="contact-logo mt-3">
+                    <img src="Group 12.png" alt="Contact Logo" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- Social Media Column -->
+            <div class="col-lg-3 col-md-6 footer-socials">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+   
+
+<style>
+  footer {
+    background-color: #f8f9fa; /* light gray background */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #555; /* gray text */
+    border-top: 1px solid #ddd;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+</style>
+
+    <!-- Bootstrap JS at bottom of body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+    
+
+</body>
+</html>
+
+
+
